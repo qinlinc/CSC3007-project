@@ -1,70 +1,52 @@
-﻿state,total_production,total_consumption,cosumption_less_production,,,,,
-Alabama,"1,206","1,839",633,,,,,
-Alaska,"1,349",640,-709,,,,,
-Arizona,482,"1,508","1,027",,,,,
-Arkansas,782,"1,035",252,,,,,
-California,"2,190","6,923","4,733",,,,,
-Colorado,"3,775","1,451","-2,324",,,,,
-Connecticut,201,667,466,,,,,
-Delaware,4,277,274,,,,,
-District of Columbia,2,144,142,,,,,
-Florida,575,"4,003","3,428",,,,,
-Georgia,656,"2,728","2,072",,,,,
-Hawaii,28,233,205,,,,,
-Idaho,152,550,398,,,,,
-Illinois,"2,160","3,613","1,453",,,,,
-Indiana,710,"2,564","1,854",,,,,
-Iowa,930,"1,526",596,,,,,
-Kansas,760,"1,070",310,,,,,
-Kentucky,756,"1,595",839,,,,,
-Louisiana,"3,838","4,200",362,,,,,
-Maine,133,365,232,,,,,
-Maryland,232,"1,213",981,,,,,
-Massachusetts,74,"1,278","1,204",,,,,
-Michigan,635,"2,611","1,975",,,,,
-Minnesota,505,"1,731","1,226",,,,,
-Mississippi,268,"1,037",769,,,,,
-Missouri,225,"1,702","1,478",,,,,
-Montana,757,429,-328,,,,,
-Nebraska,417,864,447,,,,,
-Nevada,116,710,594,,,,,
-New Hampshire,149,296,147,,,,,
-New Jersey,331,"1,894","1,563",,,,,
-New Mexico,"4,674",700,"-3,974",,,,,
-New York,839,"3,354","2,515",,,,,
-North Carolina,723,"2,471","1,748",,,,,
-North Dakota,"4,275",626,"-3,649",,,,,
-Ohio,"3,187","3,404",218,,,,,
-Oklahoma,"4,546","1,579","-2,966",,,,,
-Oregon,454,983,529,,,,,
-Pennsylvania,"9,492","3,413","-6,079",,,,,
-Rhode Island,11,176,164,,,,,
-South Carolina,732,"1,533",801,,,,,
-South Dakota,268,397,128,,,,,
-Tennessee,591,"2,039","1,448",,,,,
-Texas,"23,329","13,481","-9,848",,,,,
-Utah,789,829,40,,,,,
-Vermont,37,126,88,,,,,
-Virginia,822,"2,273","1,451",,,,,
-Washington,970,"1,779",810,,,,,
-West Virginia,"5,020",804,"-4,216",,,,,
-Wisconsin,303,"1,708","1,405",,,,,
-Wyoming,"5,884",504,"-5,380",,,,,
-,,,,,,,,
-United States,"95,711","92,862","-2,849",,,,,
-,,,,,,,,
-,,,,,,,,
-"a  Represents net interstate flows, net international imports, and stock changes.",,,,,,,,
-"b  U.S. total production includes 4,364 trillion Btu of federal offshore production not allocated to the states.",,,,,,,,
-c  U.S. total consumption includes -13 trillion Btu of net imports of coal coke that is not allocated to the states.,,,,,,,,
-,,,,,,,,
-Note: Totals may not equal sum of components due to independent rounding.,,,,,,,,
-"Sources: Data sources, estimation procedures, and assumptions are described in the documentation at ",,,,,,,,
-http://www.eia.gov/state/seds/seds-technical-notes-complete.php.,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
+﻿state,total_production,total_consumption,cosumption_less_production
+Alabama,"1,206","1,839",633
+Alaska,"1,349",640,-709
+Arizona,482,"1,508","1,027"
+Arkansas,782,"1,035",252
+California,"2,190","6,923","4,733"
+Colorado,"3,775","1,451","-2,324"
+Connecticut,201,667,466
+Delaware,4,277,274
+District of Columbia,2,144,142
+Florida,575,"4,003","3,428"
+Georgia,656,"2,728","2,072"
+Hawaii,28,233,205
+Idaho,152,550,398
+Illinois,"2,160","3,613","1,453"
+Indiana,710,"2,564","1,854"
+Iowa,930,"1,526",596
+Kansas,760,"1,070",310
+Kentucky,756,"1,595",839
+Louisiana,"3,838","4,200",362
+Maine,133,365,232
+Maryland,232,"1,213",981
+Massachusetts,74,"1,278","1,204"
+Michigan,635,"2,611","1,975"
+Minnesota,505,"1,731","1,226"
+Mississippi,268,"1,037",769
+Missouri,225,"1,702","1,478"
+Montana,757,429,-328
+Nebraska,417,864,447
+Nevada,116,710,594
+New Hampshire,149,296,147
+New Jersey,331,"1,894","1,563"
+New Mexico,"4,674",700,"-3,974"
+New York,839,"3,354","2,515"
+North Carolina,723,"2,471","1,748"
+North Dakota,"4,275",626,"-3,649"
+Ohio,"3,187","3,404",218
+Oklahoma,"4,546","1,579","-2,966"
+Oregon,454,983,529
+Pennsylvania,"9,492","3,413","-6,079"
+Rhode Island,11,176,164
+South Carolina,732,"1,533",801
+South Dakota,268,397,128
+Tennessee,591,"2,039","1,448"
+Texas,"23,329","13,481","-9,848"
+Utah,789,829,40
+Vermont,37,126,88
+Virginia,822,"2,273","1,451"
+Washington,970,"1,779",810
+West Virginia,"5,020",804,"-4,216"
+Wisconsin,303,"1,708","1,405"
+Wyoming,"5,884",504,"-5,380"
