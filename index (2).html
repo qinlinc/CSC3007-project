@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Information Visualisation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.8.0/leaflet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Roboto Slab', serif;
+        }
+        .container{
+            display: flex;
+            justify-content: flex-start;
+            padding: 10px;
+        }
+
+        .container-content{
+            margin-left: 50px;
+            margin-right: 50px;
+            max-width: 50%;
+        }
+
+        #map {
+            width: 1000px;
+            height: 600px;
+        }
+        .legend {
+            line-height: 18px;
+            color: #555;
+        }
+        .legend i {
+            width: 18px;
+            height: 18px;
+            float: left;
+            margin-right: 8px;
+            opacity: 0.7;
+        }
+
+        .btn {
+            padding: 0 15px 0 15px;
+            border-radius: 10px;
+            border-color: #3498db;
+            background-color: #1d4ca4;
+            color: #fff;
+            box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+            -webkit-transition: all 150ms ease-in-out;
+            transition: all 150ms ease-in-out;
+        }
+        
+        .btn:hover {
+            box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+        }
+
+        h1{
+            font-weight: 300;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <div id="navBtn">
+            <button class="btn" onclick="milestone1()"><h3>Milestone 1</h3></button>
+        </div>
+        <div>
+            <h1>Energy Production in Different State at 2020</h1>
+        </div>
+    </center>
+    <div id="leaflet" class="container">
+        <div id="map"></div>
+        <div id="leaflet-content" class="container-content">
+            With the leaflet map, we can easily identify the energy produced by different state as compared to each other. The darker area indicate more energy is produced. Areas with high energy production is an indication of high natural resources available in the region.
+            <u><h3>Data</h3></u>
+            <p>Geograpgic geometry data in form of polygons to mark out the different state of USA</p>
+            <u><h3>Task</h3></u>
+            <p>The visualisation shows the energy produced in different states of USA</p>
+            <u><h3>Idiom</h3></u>
+            <p>The visualisation is a leaflet map that helps to display the amount of energy produced in the different state through the usage of color hue. Darker color represents more energy is produced.</p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.8.0/leaflet.js"></script>
+    <script src="https://leafletjs.com/examples/choropleth/us-states.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="leaflet.js"></script>
+    <script>
+
+    function milestone1(){
+        window.location.href = "https://docs.google.com/presentation/d/1KeXEfYnOfAi_ZGaznUBdXNdQoNMhdlumYuh17sHBSEw/edit?usp=sharing";
+    }
+    
+    </script>
+
+</body>
+</html>
