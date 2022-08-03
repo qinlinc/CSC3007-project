@@ -1,46 +1,106 @@
 <!DOCTYPE html>
 <html>
-  <link rel="stylesheet" href="project.css" />
   <head>
- 
+    <meta charset="utf-8" />
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+
+    <link rel="stylesheet" href="project.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
     <style>
-        .sunburstlabel{
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-        }
+      .sunburstlabel {
+        font-family: "Roboto", Times, serif;
+      }
     </style>
   </head>
   <body>
-    <meta charset="utf-8" />
-    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
     <center><h1>Total energy produced each year</h1></center>
     <div id="linegraph"></div>
-    <span>The graph shows an overview trend of the total energy produced each year. From the graph, we can see that the energy production is increasing from 1960 to 2019 but it decreases from 2019 to 2020. The decrease of the energy production from 2019 to 2020 is due to the covid panademic. </span>
-    <br/><span><b>Data</b></span>
+    <span
+      >The graph shows an overview trend of the total energy produced each year.
+      From the graph, we can see that the energy production is increasing from
+      1960 to 2019 but it decreases from 2019 to 2020. The decrease of the
+      energy production from 2019 to 2020 is due to the covid panademic.
+    </span>
+    <br /><span><b>Data</b></span>
     <span><li>Interval: Year of energy produced</li></span>
     <span><li>Ratio: Amount of energy produced</li></span>
-    <br/>
+    <br />
     <span><b>Task</b></span>
-    <span><li>The visualisation shows the total amount of energy produced US over the years.</li></span>
+    <span
+      ><li>
+        The visualisation shows the total amount of energy produced US over the
+        years.
+      </li></span
+    >
     <span><b>Idiom</b></span>
-    <span><li>The line graph is able to show the changes of the energy production over the years. It can be seen that US tends to produce more energy as times goes by however, due to covid, it produce lesser energy as compared to the previous years. The y axis is labeled with the energy produced and x axis is labeled with the year. It has tooltip to show the exact number of energy produced for that particular year.   </li></span>
+    <span
+      ><li>
+        The line graph is able to show the changes of the energy production over
+        the years. It can be seen that US tends to produce more energy as times
+        goes by however, due to covid, it produce lesser energy as compared to
+        the previous years. The y axis is labeled with the energy produced and x
+        axis is labeled with the year. It has tooltip to show the exact number
+        of energy produced for that particular year.
+      </li></span
+    >
 
-    <center><h1>Different type of energy produced in 2020 </h1></center>
+    <center><h1>Different type of energy produced in 2020</h1></center>
     <div id="sunburst"></div>
-    <span>The sunburst shows the energy produce from different categories in 2020. Based on the graph, it can be seen that US produced a lot of fossil fuels than the nuclear power energy and renewable energy. Fossil Fuels energys are bad energy that help to contribute to global warming. When the fossil fuels are burned, they release large energy of carbon dioxide known as the green house gases. Those green house gases trap heat in the environment which causes global warming. 
-        Natural gas can be seen that take up the highest number of percentage. Those gas mainly use in cooking, generating electricity and industrial goods and material such as  glass and clothing. It is also an important ingredient of a plastic. Following is the crude oil that has the highest number of production. Crude oil helps in the transportation in US and produced industrial good.   </span>
-        <br/><span><b>Data</b></span>
-        <span><li>Norminal: Different Categories of energy</li></span>
-        <span><li>Ratio: Amount of energy produced</li></span>
-        <span><b>Task</b></span>
-        <span><li>The visualisation shows the different category of energy produced in US in 2020</li></span>
-        <span><b>Idiom</b></span>
-        <span><li>The visualisation is the sunburst chart that help to categories each type of energy produced to better visualise if the energy produced is a bad energy or good energy. It split different category of energy into different colour which help user better differientitate what kind of energy each type of energy belong to. A tooltip is implement to allow user to see the exact value of each type energy is produced. </li></span>
-        <script src="https://d3js.org/d3.v7.js"></script>
+    <span
+      >The sunburst shows the energy produce from different categories in 2020.
+      Based on the graph, we are able to see the distribution energy of the
+      different categories. It can be seen that US produced a lot of fossil
+      fuels than the nuclear power energy and renewable energy with a percentage
+      of 79%. Fossil Fuels energys are bad sourcc of energy that help to contribute to
+      global warming. When the fossil fuels are burned, they release large
+      energy of carbon dioxide known as the green house gases. Those green house
+      gases trap heat in the environment which causes global warming. Among the fossil fuels, Natural
+      gas can be seen that it has taken up the highest number of percentage. Those gas
+      mainly use in cooking, generating electricity and industrial goods and
+      material such as glass and clothing. It is also an important ingredient of
+      a plastic. Following is the crude oil that has a higher number of
+      production. Crude oil helps in the transportation in US and produced
+      industrial good. Coal, which has the lowest production among the bad source of energy, is used to generate electricity. 
+    </span>
+    <br /><span><b>Data</b></span>
+    <span><li>Norminal: Different Categories of energy</li></span>
+    <span><li>Ratio: Amount of energy produced</li></span>
+    <span><b>Task</b></span>
+    <span
+      ><li>
+        The visualisation shows the different category of energy produced in US
+        in 2020
+      </li></span
+    >
+    <span><b>Idiom</b></span>
+    <span
+      ><li>
+        The visualisation is the sunburst chart that help to categories each
+        type of energy produced to better visualise if the energy produced is a
+        bad source of energy or good source of energy. It split different category of energy into
+        different colour which help user better differientitate what kind of
+        energy each type of energy belong to. An interactivity tooltip is
+        implement to allow user to see the exact value of each type energy is
+        produced. Percentage is calculated to allow user to compare the
+        visualisation with a number
+      </li></span
+    >
+    <span><b>Design Principle</b></span>
+    <span><li>Keep everything simple</li>
+    <span>Our goal of our visualisation is to ensure that everything is simple and understand. We ensure that unneccessary data will not be included in our visualisation. 
+    </span>
+    <span><li>Include interactivity in our graph</li>
+    <span>Our graphs are interactivity by adding tooltip to allow user to view the information in detail</span></span>
+    </span>
+    <script src="https://d3js.org/d3.v7.js"></script>
     <script>
       var margin = { top: 20, right: 100, bottom: 70, left: 100 },
-      originalWidth = 1000;
-        width = originalWidth - margin.left - margin.right,
-        height = 400 - margin.top - margin.bottom;
+        originalWidth = 1000;
+      (width = originalWidth - margin.left - margin.right),
+        (height = 400 - margin.top - margin.bottom);
       // append the svg object to the body of the page
       var svg = d3
         .select("#linegraph")
@@ -67,7 +127,7 @@
         var sunArray = data.filter(function (d) {
           return d.Year == "2020";
         });
-
+        var total = sunArray[0].Total;
         var newArray = {
           name: "Energy Production",
           children: [
@@ -80,10 +140,8 @@
               ],
             },
             {
-                name: "Nuclear Electric Power",
-                size: sunArray[0]["Nuclear Electric Power"]
-                
-              
+              name: "Nuclear Electric Power",
+              size: sunArray[0]["Nuclear Electric Power"],
             },
             {
               name: "Renewable Energy",
@@ -98,6 +156,7 @@
             },
           ],
         };
+        console.log(newArray);
 
         var tooltip = d3
           .select("body")
@@ -234,7 +293,7 @@
 
         // Variables
 
-        var radius = Math.min(width, height) ;
+        var radius = Math.min(width, height);
         var color = d3.scaleOrdinal(d3.schemePastel1);
 
         // // Create primary <g> element
@@ -250,12 +309,13 @@
           );
         format = d3.format(",d");
 
-       
         var g = sunburst
           .append("g")
-          .attr("transform", `translate(${originalWidth / 2},${(width / 2)-50})`);
+          .attr(
+            "transform",
+            `translate(${originalWidth / 2},${width / 2 - 50})`
+          );
 
-          
         // // Data strucure
         var partition = d3.partition().size([2 * Math.PI, radius]);
 
@@ -264,13 +324,19 @@
           return d.size;
         });
 
-        var tooltip = d3.select('body') // select element in the DOM with id 'chart'
-        .append('div').classed('tooltip', true); // append a div element to the element we've selected    
-        tooltip.append('div') // add divs to the tooltip defined above 
-        .attr('class', 'label'); // add class 'label' on the selection                
-        tooltip.append('div') // add divs to the tooltip defined above             
-        .attr('class', 'count'); // add class 'count' on the selection
-
+        var tooltip = d3
+          .select("body") // select element in the DOM with id 'chart'
+          .append("div")
+          .classed("tooltip", true); // append a div element to the element we've selected
+        tooltip
+          .append("div") // add divs to the tooltip defined above
+          .attr("class", "label"); // add class 'label' on the selection
+        tooltip
+          .append("div") // add divs to the tooltip defined above
+          .attr("class", "count"); // add class 'count' on the selection
+        tooltip
+          .append("div") // add divs to the tooltip defined above
+          .attr("class", "percent");
 
         // // Size arcs
         partition(root);
@@ -289,15 +355,15 @@
             return d.y1;
           });
 
-        
-        
         // // Put it all together
-        var path = g.selectAll("path")
+        var path = g
+          .selectAll("path")
           .data(root.descendants())
-          .enter().append("g");
+          .enter()
+          .append("g");
 
-
-          path.append("path")
+        path
+          .append("path")
           .attr("display", function (d) {
             return d.depth ? null : "none";
           })
@@ -306,64 +372,85 @@
           .style("fill", function (d) {
             return color((d.children ? d : d.parent).data.name);
           })
-          .on('mouseover', function(event,d) {
+          .on("mouseover", function (event, d) {
             console.log(event.currentTarget);
             d3.select(event.currentTarget)
-                  .attr("stroke", "red")
-                  .attr("stroke-width", 8);
-      
-            tooltip.select('.label').html(`Energy Type: ${d.data.name}`);     
-            tooltip.select('.count').html(`Energy Value: <Br/> ${d.value} Trillion BTU`); // set current count            
-            tooltip.style('display', 'block'); // set display   
-            })
-            .on('mouseout', function() { // when mouse leaves div                        
-            tooltip.style('display', 'none'); // hide tooltip for that element
-            d3.select(event.currentTarget).attr("stroke", "none").attr("stroke-width", 2);;  
-            })
-            .on('mousemove', function(d) { // when mouse moves                  
-            tooltip.style('top', (event.layerY + 10) + 'px'); // always 10px below the cursor
-            tooltip.style('left', (event.layerX + 10) + 'px'); // always 10px to the right of the mouse
-           // d3.select(event.currentTarget).attr("stroke", "none");  
-        });
-          
-        var sunbursttxt = path.append('text')
-        .html(function(d) { console.log("Q", d.data.name); return d.data.name})
-        .classed("sunburstlabel", true)
-        .attr("textLength", function(d){return Math.min("85",d.data.name.length * 8)})
-        .attr("lengthAdjust","spacingAndGlyphs")
-      
-        .attr("x", function(d) { return d.x; })
-        .attr("text-anchor", "middle")
-        // translate to the desired point and set the rotation
-        .attr("transform", function(d) {
+              .attr("stroke", "red")
+              .attr("stroke-width", 8);
+            console.log(d);
+            console.log(total);
+
+            var percent = Math.round((d.value / total) * 100);
+            tooltip.select(".label").html(`Energy Type: ${d.data.name}`);
+            tooltip
+              .select(".count")
+              .html(`Energy Value: <Br/> ${d.value} Trillion BTU`); // set current count
+            tooltip.select(".percent").html(`Percentage: ${percent}'%'`);
+            tooltip.style("display", "block"); // set display
+          })
+          .on("mouseout", function () {
+            // when mouse leaves div
+            tooltip.style("display", "none"); // hide tooltip for that element
+            d3.select(event.currentTarget)
+              .attr("stroke", "none")
+              .attr("stroke-width", 2);
+          })
+          .on("mousemove", function (d) {
+            // when mouse moves
+            tooltip.style("top", event.layerY + 10 + "px"); // always 10px below the cursor
+            tooltip.style("left", event.layerX + 10 + "px"); // always 10px to the right of the mouse
+            // d3.select(event.currentTarget).attr("stroke", "none");
+          });
+
+        var sunbursttxt = path
+          .append("text")
+          .html(function (d) {
+            console.log("Q", d.data.name);
+            return d.data.name;
+          })
+          .classed("sunburstlabel", true)
+          .attr("textLength", function (d) {
+            return Math.min("85", d.data.name.length * 8);
+          })
+          .attr("lengthAdjust", "spacingAndGlyphs")
+
+          .attr("x", function (d) {
+            return d.x;
+          })
+          .attr("text-anchor", "middle")
+          // translate to the desired point and set the rotation
+          .attr("transform", function (d) {
             if (d.depth > 0) {
-                return "translate(" + arc.centroid(d) + ")" +
-                       "rotate(" + getAngle(d) + ")";
-            }  else {
-                return null;
+              return (
+                "translate(" +
+                arc.centroid(d) +
+                ")" +
+                "rotate(" +
+                getAngle(d) +
+                ")"
+              );
+            } else {
+              return null;
             }
-        })
-        .attr("dx", "6") // margin
-        .attr("dy", ".35em") // vertical-align
-        .attr("height","20px")
-        .attr("pointer-events", "none");
-
-      
-
+          })
+          .attr("dx", "6") // margin
+          .attr("dy", ".35em") // vertical-align
+          .attr("height", "20px")
+          .attr("pointer-events", "none");
 
         function getAngle(d) {
-    // Offset the angle by 90 deg since the '0' degree axis for arc is Y axis, while
-    // for text it is the X axis.
-        var thetaDeg = (180 / Math.PI * (arc.startAngle()(d) + arc.endAngle()(d)) / 2 - 90);
-        // If we are rotating the text by more than 90 deg, then "flip" it.
-        // This is why "text-anchor", "middle" is important, otherwise, this "flip" would
-        // a little harder.
-        return (thetaDeg > 90) ? thetaDeg - 180 : thetaDeg;
-    }
-
-       
+          // Offset the angle by 90 deg since the '0' degree axis for arc is Y axis, while
+          // for text it is the X axis.
+          var thetaDeg =
+            ((180 / Math.PI) * (arc.startAngle()(d) + arc.endAngle()(d))) / 2 -
+            90;
+          // If we are rotating the text by more than 90 deg, then "flip" it.
+          // This is why "text-anchor", "middle" is important, otherwise, this "flip" would
+          // a little harder.
+          return thetaDeg > 90 ? thetaDeg - 180 : thetaDeg;
+        }
       });
-     
+
       // console.log(arr);
     </script>
   </body>

@@ -1,0 +1,40 @@
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.svg {
+    margin: 10px;
+    padding-top: 10px;
+}
+
+.svg .right {
+    stroke: white;
+    fill: #b53737;
+}
+
+.svg .left {
+    stroke: white;
+    fill: #0492c2;
+}
+
+.svg rect:hover {
+    fill: #64707d;
+}
+
+.svg text {
+    fill: #3cb043;
+}
+
+.svg text.label {
+    fill: black;
+}
+
+.svg text.title {
+    fill: #2216ff;
+    font-weight: bold;
+}
+
+.svg text.leftval,
+text.rightval {
+    font-size: small;
+}
