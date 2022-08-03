@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="project.css" />
+  <head>
+    <h1>Total energy produced each year</h1>
+  </head>
+  <body>
+    <meta charset="utf-8" />
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <div id="linegraph"></div>
+    <script src="https://d3js.org/d3.v7.js"></script>
+    <script>
+      var margin = { top: 20, right: 100, bottom: 70, left: 100 },
+        width = 800 - margin.left - margin.right,
+        height = 400 - margin.top - margin.bottom;
+      // append the svg object to the body of the page
+      var svg = d3
+        .select("#linegraph")
+        .append("svg")
+        .attr(
+          "viewBox",
+          "0 0 " +
+            (width + margin.left + margin.right) +
+            " " +
+            (height + margin.top + margin.bottom)
+        )
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+      d3.csv(
+        "https://raw.githubusercontent.com/qinlinc/CSC3007-project/main/PT2_US.csv"
+      ).then(function (data) {
+        console.log(data);
+        var arr = [];
+        for (let j = 0; j < data.length; j++) {
+            console.log(data[j].Total)
+        
+          arr.push({ year: data[j].Year, value: data[j].Total });
+        }
+        console.log(arr);
+        // //console.log(data);
+        // for (let i = 0; i < data.length; i++) {
+        //   // console.log(Object.entries(data[i]));
+        //   for (let j = 3; j < data["columns"].length; j++) {
+        //     y = data["columns"][j];
+        //     var index = arr.findIndex(function (item, i) {
+        //       return item.year === y;
+        //     });
+        //     arr[index].value =
+        //       parseFloat(arr[index].value) + parseFloat(data[i][y]);
+        //   }
+        // }
+        // console.log(arr);
+
+        var tooltip = d3
+          .select("body")
+          .append("rect")
+          .style("position", "absolute")
+          .style("z-index", "10")
+          .style("visibility", "hidden")
+          .style("color", "black")
+          .style("font-size", "20px")
+          .style("background", "white")
+          .style("padding", "5px")
+          .style("padding-left", "15px")
+          .style("padding-right", "15px")
+          .style("opacity", "0.9")
+          .style("border", "1px solid black");
+        var bisectDate = d3.bisector(function (d) {
+          return d.year;
+        }).left;
+
+        var div = d3
+          .select("body")
+          .append("div")
+          .attr("class", "tooltip")
+          .style("opacity", 0);
+
+        var x = d3
+          .scaleTime()
+          .domain(
+            d3.extent(arr, function (d) {
+              return d.year;
+            })
+          )
+          .range([0, width]);
+        svg
+          .append("g")
+          .attr("transform", "translate(0," + height + ")")
+          .call(d3.axisBottom(x).tickFormat(d3.format("d")));
+
+        var focus = svg.append("g").style("display", "none");
+
+        var y = d3
+          .scaleLinear()
+          .domain([
+            0,
+            d3.max(arr, function (d) {
+              return +d.value;
+            }),
+          ])
+          .range([height, 0]);
+        svg.append("g").call(d3.axisLeft(y));
+
+        svg
+          .append("path")
+          .datum(arr)
+          .attr("fill", "none")
+          .attr("stroke", "steelblue")
+          .attr("stroke-width", 1.5)
+
+          .attr(
+            "d",
+            d3
+              .line()
+              .x(function (d) {
+                return x(d.year);
+              })
+              .y(function (d) {
+                  console.log(parseInt(d.value));
+                return y(d.value);
+              })
+          );
+
+        // append the circle at the intersection
+        focus
+          .append("circle")
+          .attr("class", "y")
+          .style("fill", "none")
+          .style("stroke", "blue")
+          .attr("r", 4);
+
+        // append the rectangle to capture mouse
+        svg
+          .append("rect")
+          .attr("width", width)
+          .attr("height", height)
+          .style("fill", "none")
+          .style("pointer-events", "all")
+          .on("mouseover", function () {
+            focus.style("display", null);
+          })
+          .on("mouseout", function () {
+            focus.style("display", "none");
+            div.transition().duration(500).style("opacity", 0);
+          })
+          .on("mousemove", mousemove);
+
+        function mousemove() {
+          var x0 = x.invert(d3.pointer(event, this)[0]),
+            i = bisectDate(arr, x0, 1),
+            d0 = arr[i - 1],
+            d1 = arr[i],
+            d = x0 - d0.year > d1.year - x0 ? d1 : d0;
+
+          div.transition().duration(200).style("opacity", 0.9);
+          div
+            .html(
+              "Year: " +
+                d.year +
+                "<br/>" +
+                "Total Energy Produced: " +
+                d.value
+            )
+            .style("left", x(d.year) + "px")
+            .style("top", y(d.value) + "px");
+
+          focus
+            .select("circle.y")
+            .attr(
+              "transform",
+              "translate(" + x(d.year) + "," + y(d.value) + ")"
+            );
+        }
+
+        //X-scale
+        svg
+          .append("text")
+          .attr(
+            "transform",
+            "translate(" + width / 2 + "," + (height + 40) + ")"
+          )
+          .text("Year")
+          .style("margin", "40px")
+          .attr("text-align", "middle");
+        //Y scale
+        svg
+          .append("text")
+          .attr("transform", "translate(-80, " + height / 1.5 + ") rotate(-90)")
+          .text("Amount of energy produced")
+
+          .attr("text-align", "middle");
+      });
+      // console.log(arr);
+    </script>
+    
+  </body>
+</html>
