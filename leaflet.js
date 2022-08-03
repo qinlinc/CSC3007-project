@@ -45,7 +45,6 @@ Promise.all([d3.csv("https://raw.githubusercontent.com/qinlinc/CSC3007-project/m
     const geoColorScale = d3.scaleLinear()
         .domain(geoDomain)
         .range(["#f7fbff","#e3eef9","#cfe1f2","#b5d4e9","#93c3df","#6daed5","#4b97c9","#2f7ebc","#1864aa","#0a4a90","#08306b","#040021"]);
-    console.log(geoColorScale(20000))
     let width = 1000, height = 1000;
 
     let tiles = new L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -57,9 +56,6 @@ Promise.all([d3.csv("https://raw.githubusercontent.com/qinlinc/CSC3007-project/m
         center: [37.8, -96], 
         zoom: 4
     }).addLayer(tiles);
-
-
-    console.log(statesData)
 
     var stateClicked = ""
     function style(feature) {
@@ -101,7 +97,6 @@ Promise.all([d3.csv("https://raw.githubusercontent.com/qinlinc/CSC3007-project/m
             stateClicked = currState
             map.fitBounds(e.target.getBounds());
         }
-        console.log(stateClicked)
     }
 
     function onEachFeature(feature, layer) {
@@ -136,7 +131,6 @@ Promise.all([d3.csv("https://raw.githubusercontent.com/qinlinc/CSC3007-project/m
         style: style,
         onEachFeature: onEachFeature
     }).addTo(map);
-    console.log(geojson._layers)
 
     var legend = L.control({position: 'bottomright'});
 

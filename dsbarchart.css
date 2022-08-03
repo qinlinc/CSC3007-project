@@ -26,11 +26,11 @@
 }
 
 .svg text.label {
-    fill: black;
+    fill: #e0e0e0;
 }
 
 .svg text.title {
-    fill: #2216ff;
+    fill: white;
     font-weight: bold;
 }
 
