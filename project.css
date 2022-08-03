@@ -1,0 +1,21 @@
+#linegraph{
+    margin: auto;
+
+}
+
+div.tooltip {
+    position: absolute;
+    text-align: left;
+    width: fit-content;
+    height: 40px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top:5px;
+    padding-bottom:5px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 5px;
+    pointer-events: none;
+  }
+
