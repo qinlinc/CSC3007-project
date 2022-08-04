@@ -14,7 +14,6 @@ var svg = d3
 d3.csv(
   "https://raw.githubusercontent.com/qinlinc/CSC3007-project/main/PT2_US.csv"
 ).then(function (data) {
-  console.log(data);
   var arr = [];
   for (let j = 0; j < data.length; j++) {
     arr.push({ year: data[j].Year, value: data[j].Total });
@@ -52,7 +51,6 @@ d3.csv(
       },
     ],
   };
-  console.log(newArray);
 
   var tooltip = d3
     .select("body")
@@ -265,12 +263,9 @@ d3.csv(
       return color((d.children ? d : d.parent).data.name);
     })
     .on("mouseover", function (event, d) {
-      console.log(event.currentTarget);
       d3.select(event.currentTarget)
         .attr("stroke", "red")
         .attr("stroke-width", 8);
-      console.log(d);
-      console.log(total);
 
       var percent = Math.round((d.value / total) * 100);
       tooltip.select(".label").html(`Energy Type: ${d.data.name}`);
@@ -297,7 +292,6 @@ d3.csv(
   var sunbursttxt = path
     .append("text")
     .html(function (d) {
-      console.log("Q", d.data.name);
       return d.data.name;
     })
     .classed("sunburstlabel", true)
@@ -330,6 +324,9 @@ d3.csv(
     .attr("height", "20px")
     .attr("pointer-events", "none");
 
+  var sbl = d3.select(".sunburstlabel")
+  sbl.attr("fill","white")
+  .attr("textLength","120")
   function getAngle(d) {
     // Offset the angle by 90 deg since the '0' degree axis for arc is Y axis, while
     // for text it is the X axis.
