@@ -19,4 +19,5 @@
     pointer-events: none;
     border: solid black;
     color: black;
+    visibility: hidden;
   }

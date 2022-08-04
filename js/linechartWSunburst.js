@@ -138,9 +138,12 @@ d3.csv(
     .style("pointer-events", "all")
     .on("mouseover", function () {
       focus.style("display", null);
+      focus.style("visibility", "visible");
+
     })
     .on("mouseout", function () {
       focus.style("display", "none");
+      focus.style("visibility", "hidden");
       div.transition().duration(500).style("opacity", 0);
     })
     .on("mousemove", mousemove);
@@ -158,7 +161,8 @@ d3.csv(
         "Year: " + d.year + "<br/>" + "Total Energy Produced: " + d.value
       )
       .style("left", x(d.year) + "px")
-      .style("top", y(d.value) + 100 + "px");
+      .style("top", y(d.value) + 200 + "px")
+      .style("visibility", "visible");
 
     focus
       .select("circle.y")
@@ -274,10 +278,12 @@ d3.csv(
         .html(`Energy Value: <Br/> ${d.value} Trillion BTU`); // set current count
       tooltip.select(".percent").html(`Percentage: ${percent}'%'`);
       tooltip.style("display", "block"); // set display
+      tooltip.style("visibility", "visible"); 
     })
     .on("mouseout", function () {
       // when mouse leaves div
       tooltip.style("display", "none"); // hide tooltip for that element
+      tooltip.style("visibility", "hidden"); 
       d3.select(event.currentTarget)
         .attr("stroke", "none")
         .attr("stroke-width", 2);
