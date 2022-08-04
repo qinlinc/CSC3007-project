@@ -120,6 +120,7 @@ svg{
 
 #ql_container h2, #ql_container h3, #ql_container p{
     font-family: 'Shadows Into Light', cursive;
+    font-size: 20px;
 }
 
 #wc_container h2, #wc_container h3, #wc_container p{
