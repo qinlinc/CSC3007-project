@@ -1,0 +1,115 @@
+
+body{
+    font-family: 'Roboto Slab', serif;
+    margin: 0;
+}
+
+h1{
+    font-weight: 300;
+}
+
+svg{
+    width: 500;
+    height: 500;
+}
+
+.chartContainer{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#sunburst_container, #dsbarchart_container, #designpitfall-container{
+    background-color: #262829;
+    color: white;
+    box-shadow: inset 0px 8px 10px -6px #fff, inset 0px -8px 10px -6px #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.container{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.container-content{
+    padding-left: 50px;
+    padding-right: 50px;
+    max-width: 50%;
+}
+
+.btn {
+    padding: 0 15px 0 15px;
+    border-radius: 10px;
+    border-color: #3498db;
+    background-color: #1d4ca4;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+
+.btn:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+}
+
+#designpitfall-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.box{
+    border-radius: 25px;
+    border: lightgrey solid 1px;
+    width: 25%;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: inset 0 0 10px #555, 0px 10px 10px -15px #666;
+    background-color: #eee;
+    color: black;
+}
+
+.box-header h2{
+    font-weight: 300;
+}
+
+#reflection-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card{
+    margin: 20px;
+    padding: 20px;
+    background-color: #FFFF8A;
+    width: 25%;
+    box-shadow: 10px 5px 5px lightgrey;
+}
+
+.card-header{
+    font-weight: 300;
+}
+
+#imgContainer{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+#imgContainer img{
+    max-width: 100px;
+}
+
+#wl_container h2, #wl_container h3, #wl_container p{
+    font-family: 'Square Peg', cursive;
+    font-size: 20px;
+}
+
+#ql_container h2, #ql_container h3, #ql_container p{
+    font-family: 'Shadows Into Light', cursive;
+}
+
+#wc_container h2, #wc_container h3, #wc_container p{
+    font-family: 'Neucha', cursive !important;
+}

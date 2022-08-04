@@ -6,66 +6,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.8.0/leaflet.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&family=Roboto+Slab:wght@300;400&family=Shadows+Into+Light&family=Square+Peg&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="project.css" />
     <link rel="stylesheet" href="dsbarchart.css" />
     <link rel="stylesheet" href="leaflet.css" />
-    <style>
-        body{
-            font-family: 'Roboto Slab', serif;
-            margin: 0;
-        }
-
-        h1{
-            font-weight: 300;
-        }
-
-        svg{
-            width: 500;
-            height: 500;
-        }
-        
-        .chartContainer{
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
-
-        #sunburst_container, #dsbarchart_container{
-            background-color: #262829;
-            color: white;
-            box-shadow: inset 0px 8px 10px -6px #fff, inset 0px -8px 10px -6px #fff;
-
-        }
-
-        .container{
-            display: flex;
-            justify-content: flex-start;
-            padding: 10px;
-        }
-
-        .container-content{
-            padding-left: 50px;
-            padding-right: 50px;
-            max-width: 50%;
-        }
-
-        .btn {
-            padding: 0 15px 0 15px;
-            border-radius: 10px;
-            border-color: #3498db;
-            background-color: #1d4ca4;
-            color: #fff;
-            box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
-            -webkit-transition: all 150ms ease-in-out;
-            transition: all 150ms ease-in-out;
-        }
-        
-        .btn:hover {
-            box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="main.css" />
 </head>
 <body>
     <center>
@@ -76,9 +21,7 @@
     <div  id="linegraph_container" class="chartContainer">
         <div id="linegraph_header">
             <center>
-                <div>
                     <h1>Total energy produced each year</h1>
-                </div>
             </center> 
         </div> 
         <div class="container"> 
@@ -98,9 +41,7 @@
     <div  id="sunburst_container" class="chartContainer">
         <div id="sunburst_header">
             <center>
-                <div>
                     <h1>Different type of energy produced in 2020</h1>
-                </div>
             </center> 
         </div> 
         <div class="container"> 
@@ -120,9 +61,7 @@
     <div  id="leaflet_container" class="chartContainer">
         <div id="leaflet_header">
             <center>
-                <div>
                     <h1>Energy Production in Different State at 2020</h1>
-                </div>
             </center> 
         </div> 
         <div class="container"> 
@@ -141,9 +80,7 @@
     <div id="dsbarchart_container" class="chartContainer">
         <div id="dsbarchart-header">
             <center>
-                <div>
                     <h1>US Total Production and Consumption by States</h1>
-                </div>
             </center> 
         </div>
         <div class="container">  
@@ -160,6 +97,95 @@
             <div id="dsbarchart"></div>
         </div>
     </div>
+    <div id="tech_container">
+        <div id="tech_header">
+            <center>
+                    <h1>Technologies Used</h1>
+            </center> 
+        </div> 
+        <div id="imgContainer">
+            <img src="img/html.png">
+            <img src="img/d3.png">
+            <img src="img/css.png">
+        </div>
+    </div>
+    <div id="designpitfall-container">   
+        <div id="design_container" class="box">
+            <div class="box-header">
+                <center>
+                        <h2>Design Principle</h2>
+                </center> 
+            </div>
+            <div class="box-content">
+                <u><h3>Keep everything simple</h3></u>
+                <p>Our goal of our visualisation is to ensure that everything is simple and understand. We ensure that unneccessary data will not be included in our visualisation. </p>
+                <li>Ordinal - State</li>
+                <u><h3>Include interactivity in our graph</h3></u>
+                <p>Our graphs are interactivity by adding tooltip to allow user to view the information in detail</p>
+            </div>
+        </div>
+        <div id="pitfall_container" class="box">
+            <div class="box-header">
+                <center>
+                        <h2>Pitfalls</h2>
+                </center> 
+            </div>
+            <div class="box-content">
+                <p>There are alot of different kind of data available to use for US energy but their units are different. There are also missing data which make it hard to make fair comparison. To solve the issue, we explore each of the dataset and find out if dataset suit our use-case </p>
+            </div>
+        </div>    
+        <div id="future_container" class="box">
+            <div class="box-header">
+                <center>
+                        <h2>Future Enhancement</h2>
+                </center> 
+            </div>
+            <div class="box-content">
+                <p>The line chart can be enhanced by adding the total energy consumption to compare with the total energy production for each year so that we can visualise if the total energy produced is enough for the US residents to consume. </p>
+            </div>
+        </div>
+    </div>
+    <div id="reflection-container">
+        <div id="wl_container" class="card">
+            <div class="card-header">
+                <center>
+                        <h2>Tan Wei Ling</h2>
+                </center> 
+            </div>
+            <div class="card-content">
+                <u><h3>Contribution</h3></u>
+                <p>Insert reflection here!</p>
+                <u><h3>Data</h3></u>
+                <p>Insert reflection here!</p>
+            </div>
+        </div>
+        <div id="ql_container" class="card">
+            <div class="card-header">
+                <center>
+                        <h2>Chai Qin Lin</h2>
+                </center> 
+            </div>
+            <div class="card-content">
+                <u><h3>Contribution</h3></u>
+                <p>Insert reflection here!</p>
+                <u><h3>Data</h3></u>
+                <p>Insert reflection here!</p>
+            </div>
+        </div>
+        <div id="wc_container" class="card">
+            <div class="card-header">
+                <center>
+                        <h2>Teo Wei Chen</h2>
+                </center> 
+            </div>
+            <div class="card-content">
+                <u><h3>Contribution</h3></u>
+                <p>Insert reflection here!</p>
+                <u><h3>Data</h3></u>
+                <p>Insert reflection here!</p>
+            </div>
+        </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.8.0/leaflet.js"></script>
     <script src="https://leafletjs.com/examples/choropleth/us-states.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
@@ -168,12 +194,9 @@
     <script src="dsbarchart.js"></script>
     <script src="linechartWSunburst.js"></script>
     <script>
-
     function milestone1(){
         window.location.href = "https://docs.google.com/presentation/d/1KeXEfYnOfAi_ZGaznUBdXNdQoNMhdlumYuh17sHBSEw/edit?usp=sharing";
     }
-    
     </script>
-
 </body>
 </html>
