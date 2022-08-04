@@ -124,4 +124,12 @@ svg{
 
 #wc_container h2, #wc_container h3, #wc_container p{
     font-family: 'Neucha', cursive !important;
+    font-size: 20px;
+}
+.header-content{
+    margin: 20px;
+    padding-left: 20px;
+    padding-right: 10px;
+
+   
 }
