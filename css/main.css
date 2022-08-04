@@ -81,15 +81,25 @@ svg{
 
 .card{
     margin: 20px;
-    padding: 20px;
     background-color: #FFFF8A;
     width: 25%;
     box-shadow: 10px 5px 5px lightgrey;
     min-height: 300px;
+    padding-bottom: 20px;
 }
 
 .card-header{
     font-weight: 300;
+    border-bottom: #C0C0C0 groove 1px;
+    background-color: #ffffcc;
+    padding: 20px;
+}
+.card-header h2{
+    margin: 0;
+}
+
+.card-content{
+    margin: 25px;
 }
 
 #imgContainer{
@@ -103,12 +113,13 @@ svg{
 }
 
 #wl_container h2, #wl_container h3, #wl_container p{
-    font-family: 'Square Peg', cursive;
+    font-family: 'Kalam', cursive;
     font-size: 20px;
 }
 
 #ql_container h2, #ql_container h3, #ql_container p{
     font-family: 'Shadows Into Light', cursive;
+    font-size: 20px;
 }
 
 #wc_container h2, #wc_container h3, #wc_container p{
