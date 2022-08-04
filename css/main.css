@@ -85,6 +85,7 @@ svg{
     background-color: #FFFF8A;
     width: 25%;
     box-shadow: 10px 5px 5px lightgrey;
+    min-height: 300px;
 }
 
 .card-header{
